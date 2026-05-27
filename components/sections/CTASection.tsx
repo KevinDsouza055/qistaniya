@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function CTASection() {
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
+    <section className="relative page-section-lg overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0"

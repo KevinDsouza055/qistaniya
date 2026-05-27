@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-charcoal-900 pt-16">
       {/* Hero */}
-      <div className="relative h-52 sm:h-64 flex items-end overflow-hidden">
+      <div className="page-hero">
         <div className="absolute inset-0"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1600&q=80')`,
@@ -15,7 +15,7 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/50 to-charcoal-900/95" />
         <div className="absolute inset-0 arabic-pattern opacity-30" />
-        <div className="relative z-10 px-4 sm:px-8 pb-8 max-w-7xl mx-auto w-full">
+        <div className="page-hero-content">
           <h1 className="font-serif text-cream" style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800 }}>
             Find <span className="gold-text italic">Us</span>
           </h1>
@@ -25,12 +25,12 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid lg:grid-cols-2 gap-10">
+      <div className="site-container page-section-lg">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12">
           {/* Left: Info */}
           <div className="space-y-6">
             {/* Address card */}
-            <div className="glass gold-border rounded-sm p-6">
+            <div className="glass gold-border rounded-sm content-panel">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-sm flex items-center justify-center shrink-0"
                   style={{ background: 'linear-gradient(135deg, #d4a843, #c4922a)' }}>
@@ -59,7 +59,7 @@ export default function ContactPage() {
             </div>
 
             {/* Phone */}
-            <div className="glass gold-border rounded-sm p-6">
+            <div className="glass gold-border rounded-sm content-panel">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-sm flex items-center justify-center shrink-0"
                   style={{ background: 'linear-gradient(135deg, #d4a843, #c4922a)' }}>
@@ -82,7 +82,7 @@ export default function ContactPage() {
             </div>
 
             {/* Hours */}
-            <div className="glass gold-border rounded-sm p-6">
+            <div className="glass gold-border rounded-sm content-panel">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-sm flex items-center justify-center shrink-0"
                   style={{ background: 'linear-gradient(135deg, #d4a843, #c4922a)' }}>

@@ -48,7 +48,7 @@ export default function ReviewsSection() {
 
       <div className="site-container-6xl relative z-10">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="section-heading">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-10 bg-gradient-to-r from-transparent to-gold-300/50" />
             <span className="text-gold-300 text-[10px] tracking-[0.45em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>What Guests Say</span>
@@ -67,7 +67,7 @@ export default function ReviewsSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review, idx) => (
             <div
               key={review.id}

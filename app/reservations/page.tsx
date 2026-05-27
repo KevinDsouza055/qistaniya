@@ -114,7 +114,7 @@ export default function ReservationsPage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80')`,
+            backgroundImage: `url('/images/hero1.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

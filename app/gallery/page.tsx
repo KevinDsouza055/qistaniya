@@ -34,18 +34,18 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-charcoal-900 pt-16">
       {/* Hero */}
-      <div className="relative h-52 sm:h-64 flex items-end overflow-hidden">
+      <div className="page-hero">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1600&q=80')`,
+            backgroundImage: `url('/images/hero1.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center 30%',
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/50 to-charcoal-900/95" />
         <div className="absolute inset-0 arabic-pattern opacity-30" />
-        <div className="relative z-10 px-4 sm:px-8 pb-8 max-w-7xl mx-auto w-full">
+        <div className="page-hero-content">
           <h1 className="font-serif text-cream" style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800 }}>
             Our <span className="gold-text italic">Gallery</span>
           </h1>
@@ -56,8 +56,8 @@ export default function GalleryPage() {
       </div>
 
       {/* Filter tabs */}
-      <div className="sticky top-16 z-30 bg-charcoal-800/95 backdrop-blur-xl border-b border-gold-300/10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex gap-2 overflow-x-auto scrollbar-none">
+      <div className="control-bar">
+        <div className="site-container py-4 flex gap-2 overflow-x-auto scrollbar-none">
           {filterTabs.map(tab => (
             <button
               key={tab}
@@ -76,7 +76,7 @@ export default function GalleryPage() {
       </div>
 
       {/* Masonry Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div className="site-container page-section">
         <div className="masonry-grid">
           {filtered.map((img, i) => (
             <div

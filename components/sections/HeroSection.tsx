@@ -24,7 +24,7 @@ export default function HeroSection() {
         ref={videoRef}
         className="absolute inset-0 scale-110"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1800&q=80')`,
+          backgroundImage: `url('/images/hero1.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           willChange: 'transform',

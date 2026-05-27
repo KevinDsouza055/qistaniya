@@ -31,18 +31,18 @@ export default function MenuPage() {
   return (
     <div className="min-h-screen bg-charcoal-900 pt-16">
       {/* Hero */}
-      <div className="relative h-56 sm:h-72 flex items-end overflow-hidden">
+      <div className="page-hero">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1600&q=80')`,
+            backgroundImage: `url('/images/hero1.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center 40%',
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/50 to-charcoal-900/95" />
         <div className="absolute inset-0 arabic-pattern opacity-30" />
-        <div className="relative z-10 px-4 sm:px-8 pb-8 max-w-7xl mx-auto w-full">
+        <div className="page-hero-content">
           <div className="flex items-center gap-3 mb-2">
             <div className="h-px w-6 bg-gold-300/50" />
             <span className="text-gold-300 text-[9px] tracking-[0.4em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>Our Offerings</span>
@@ -54,8 +54,8 @@ export default function MenuPage() {
       </div>
 
       {/* Sticky controls */}
-      <div className="sticky top-16 z-30 bg-charcoal-800/95 backdrop-blur-xl border-b border-gold-300/10">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+      <div className="control-bar">
+        <div className="site-container py-4">
           {/* Search + Veg filter */}
           <div className="flex gap-3 mb-4">
             <div className="relative flex-1">
@@ -65,7 +65,7 @@ export default function MenuPage() {
                 placeholder="Search dishes..."
                 value={search}
                 onChange={e => setSearch(e.target.value)}
-                className="w-full bg-charcoal-700 border border-gold-300/20 rounded-sm pl-9 pr-4 py-2.5 text-cream text-sm placeholder:text-cream/30 focus:outline-none focus:border-gold-300/50 transition-colors"
+                className="w-full field-control bg-charcoal-700 border border-gold-300/20 rounded-sm pl-9 pr-4 py-2.5 text-cream text-sm placeholder:text-cream/30 focus:outline-none focus:border-gold-300/50 transition-colors"
                 style={{ fontFamily: 'Raleway, sans-serif' }}
               />
             </div>
@@ -116,7 +116,7 @@ export default function MenuPage() {
       </div>
 
       {/* Menu grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      <div className="site-container page-section">
         {filtered.length === 0 ? (
           <div className="text-center py-24">
             <p className="text-cream/30 text-lg" style={{ fontFamily: 'Cormorant Garamond, serif' }}>No dishes found for your search.</p>
@@ -125,7 +125,7 @@ export default function MenuPage() {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filtered.map((item, idx) => {
               const qty = getQty(item.name);
               const itemId = `menu-${idx}`;

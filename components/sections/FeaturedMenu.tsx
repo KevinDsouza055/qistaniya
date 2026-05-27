@@ -56,9 +56,9 @@ export default function FeaturedMenu() {
     <section className="section-pad bg-charcoal-900 relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-300/30 to-transparent" />
 
-      <div className="max-w-7xl mx-auto">
+      <div className="site-container">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="section-heading">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-10 bg-gradient-to-r from-transparent to-gold-300/50" />
             <span className="text-gold-300 text-[10px] tracking-[0.45em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>
@@ -78,7 +78,7 @@ export default function FeaturedMenu() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {featured.map((dish) => (
             <div key={dish.id} className="menu-card glass gold-border rounded-sm overflow-hidden group">
               {/* Image */}

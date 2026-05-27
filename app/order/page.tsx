@@ -80,8 +80,8 @@ export default function OrderPage() {
 
   return (
     <div className="min-h-screen bg-charcoal-900 pt-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-        <div className="mb-8">
+      <div className="site-container-6xl page-section">
+        <div className="mb-10">
           <div className="flex items-center gap-3 mb-2">
             <div className="h-px w-6 bg-gold-300/50" />
             <span className="text-gold-300 text-[10px] tracking-[0.4em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>
@@ -94,7 +94,7 @@ export default function OrderPage() {
         </div>
 
         <form onSubmit={handlePlaceOrder}>
-          <div className="grid lg:grid-cols-5 gap-8">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-10">
             {/* Cart items - 3 cols */}
             <div className="lg:col-span-3 space-y-4">
               <h2 className="text-cream/70 text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: 'Raleway, sans-serif' }}>
@@ -102,7 +102,7 @@ export default function OrderPage() {
               </h2>
 
               {items.map(item => (
-                <div key={item.id} className="glass gold-border rounded-sm p-4 flex gap-4">
+                <div key={item.id} className="glass gold-border rounded-sm p-5 flex gap-4">
                   {/* Image */}
                   <div className="relative w-20 h-20 rounded-sm overflow-hidden shrink-0">
                     <Image src={item.image_url} alt={item.name} fill className="object-cover" sizes="80px" />
@@ -161,7 +161,7 @@ export default function OrderPage() {
 
             {/* Order summary - 2 cols */}
             <div className="lg:col-span-2">
-              <div className="glass gold-border rounded-sm p-6 sticky top-24">
+              <div className="glass gold-border rounded-sm content-panel sticky top-24">
                 <h2 className="text-cream font-semibold mb-5" style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.1rem' }}>
                   Order Summary
                 </h2>

@@ -8,7 +8,7 @@ export default function StorySection() {
       {/* Background pattern */}
       <div className="absolute inset-0 arabic-pattern opacity-50" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="site-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Images collage */}
           <div className="relative h-[400px] md:h-[500px] order-2 lg:order-1">
@@ -67,7 +67,7 @@ export default function StorySection() {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { num: '100+', label: 'Dishes' },
                 { num: '855+', label: 'Reviews' },

@@ -173,7 +173,7 @@ export default function StaffDashboard() {
     <div className="min-h-screen bg-charcoal-900 pt-16">
       {/* Dashboard Header */}
       <div className="glass-dark border-b border-gold-300/10 sticky top-16 z-30">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between gap-4 flex-wrap">
+        <div className="site-container py-4 flex items-center justify-between gap-4 flex-wrap">
           <div>
             <h1 className="font-serif text-cream text-xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
               Staff <span className="gold-text">Dashboard</span>
@@ -202,9 +202,9 @@ export default function StaffDashboard() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      <div className="site-container page-section">
         {/* Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
           {STATUS_OPTIONS.map(status => (
             <div key={status} className={`glass gold-border rounded-sm p-4 text-center cursor-pointer transition-all ${filter === status ? 'border-gold-300/50' : ''}`} onClick={() => setFilter(prev => prev === status ? 'all' : status)}>
               <p className="text-2xl font-bold font-serif" style={{ fontFamily: 'Playfair Display, serif', color: status === 'pending' ? '#fbbf24' : status === 'preparing' ? '#60a5fa' : status === 'ready' ? '#4ade80' : '#d4a843' }}>
@@ -245,7 +245,7 @@ export default function StaffDashboard() {
             <p className="text-cream/30 text-sm" style={{ fontFamily: 'Raleway, sans-serif' }}>No orders in this category</p>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className="space-y-5">
             {filtered.map(order => (
               <div key={order.id} className="glass gold-border rounded-sm p-5 sm:p-6">
                 <div className="flex flex-col sm:flex-row sm:items-start gap-4">
