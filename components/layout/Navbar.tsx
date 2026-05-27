@@ -30,7 +30,13 @@ export default function Navbar() {
         scrolled ? 'glass-dark shadow-lg shadow-black/40' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        className="site-container"
+        style={{
+          width: 'min(calc(100% - 4rem), 80rem)',
+          marginInline: 'auto',
+        }}
+      >
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-none group">

@@ -17,7 +17,7 @@ export default function CTASection() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-300/40 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-300/40 to-transparent" />
 
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
+      <div className="relative z-10 site-container-3xl text-center">
         <div className="flex items-center justify-center gap-3 mb-6">
           <div className="h-px w-8 bg-gold-300/50" />
           <span className="text-gold-300 text-[9px] tracking-[0.5em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>Experience Royalty</span>
