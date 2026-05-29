@@ -53,13 +53,13 @@ export default function FeaturedMenu() {
   const { addItem } = useCart();
 
   return (
-    <section className="pt-64 pb-[30vh] sm:pt-80 sm:pb-[40vh] bg-charcoal-900 relative overflow-hidden">
+    <section className="py-24 sm:py-40 bg-charcoal-900 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-300/30 to-transparent" />
-
-      <div className="site-container px-8 sm:px-16 max-w-[90rem] mx-auto">
+      
+      <div className="site-container px-6 sm:px-8 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="section-heading mb-40 sm:mb-64">
-          <div className="flex items-center justify-center gap-4 mb-12">
+        <div className="section-heading mb-16 sm:mb-24 text-center">
+          <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold-300/50" />
             <span className="text-gold-300 text-[11px] tracking-[0.5em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>
               Curated Selection
@@ -68,27 +68,26 @@ export default function FeaturedMenu() {
           </div>
           <h2
             className="font-serif text-cream"
-            style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(3.5rem, 8vw, 5.5rem)', fontWeight: 700 }}
+            style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 700 }}
           >
             Royal <span className="gold-text italic">Favourites</span>
           </h2>
-          <p className="text-cream/50 mt-12 text-xl sm:text-3xl max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Raleway, sans-serif' }}>
+          <p className="text-cream/50 mt-6 text-base sm:text-lg max-w-xl mx-auto leading-relaxed" style={{ fontFamily: 'Raleway, sans-serif' }}>
             Dishes our guests return for, again and again
           </p>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 sm:gap-32 lg:gap-40">
+        {/* Card Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {featured.map((dish) => (
-            <div key={dish.id} className="menu-card glass gold-border rounded-[5rem] sm:rounded-[7rem] overflow-hidden group transition-all duration-700 hover:-translate-y-8 hover:border-gold-300 hover:shadow-[0_60px_120px_rgba(212,168,67,0.18)]">
+            <div key={dish.id} className="menu-card glass gold-border rounded-3xl overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:border-gold-300">
               {/* Image */}
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-56 sm:h-64 overflow-hidden">
                 <Image
                   src={dish.image_url}
                   alt={dish.name}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/80 to-transparent" />
 
@@ -109,21 +108,18 @@ export default function FeaturedMenu() {
               </div>
 
               {/* Content */}
-              <div className="p-14 sm:p-20">
-                <div className="flex items-start justify-between mb-8">
-                  <h3
-                    className="text-cream font-serif text-2xl sm:text-3xl font-semibold leading-tight pr-2"
-                    style={{ fontFamily: 'Playfair Display, serif' }}
-                  >
+              <div className="p-6 sm:p-8">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-cream font-serif text-lg sm:text-xl font-semibold leading-tight pr-2" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {dish.name}
                   </h3>
-                  {dish.is_spicy && <span title="Spicy" className="text-3xl shrink-0">🌶️</span>}
+                  {dish.is_spicy && <span title="Spicy" className="text-xl shrink-0">🌶️</span>}
                 </div>
-                <p className="text-cream/40 text-lg leading-[1.8] mb-14 h-20 line-clamp-2" style={{ fontFamily: 'Raleway, sans-serif' }}>
+                <p className="text-cream/40 text-sm leading-relaxed mb-6 h-10 line-clamp-2" style={{ fontFamily: 'Raleway, sans-serif' }}>
                   {dish.description}
                 </p>
-                <div className="flex items-center justify-between pt-10 border-t border-gold-300/10">
-                  <span className="gold-text font-serif text-4xl sm:text-5xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <div className="flex items-center justify-between pt-4 border-t border-gold-300/10">
+                  <span className="gold-text font-serif text-2xl sm:text-3xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
                     ₹{dish.price}
                   </span>
                   <button
@@ -131,11 +127,11 @@ export default function FeaturedMenu() {
                       addItem({ id: dish.id, name: dish.name, price: dish.price, quantity: 1, image_url: dish.image_url, is_veg: dish.is_veg });
                       toast.success(`${dish.name} added to cart!`);
                     }}
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-110 active:scale-95 shadow-2xl"
+                    className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg"
                     style={{ background: 'linear-gradient(135deg, #d4a843, #c4922a)' }}
                     aria-label={`Add ${dish.name} to cart`}
                   >
-                    <Plus size={24} color="#0a0a08" strokeWidth={3} />
+                    <Plus size={20} color="#0a0a08" strokeWidth={3} />
                   </button>
                 </div>
               </div>
@@ -144,8 +140,8 @@ export default function FeaturedMenu() {
         </div>
 
         {/* View full menu CTA */}
-        <div className="text-center mt-48 sm:mt-[20vh]">
-          <Link href="/menu" className="btn-outline inline-block px-24 py-8 text-lg tracking-[0.4em] font-medium transition-all hover:px-32">
+        <div className="text-center mt-16 sm:mt-24">
+          <Link href="/menu" className="btn-outline inline-block px-12 py-4 text-base tracking-[0.2em] font-medium transition-all hover:px-16">
             View Full Menu
           </Link>
         </div>
