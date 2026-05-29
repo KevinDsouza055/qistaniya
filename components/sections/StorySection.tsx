@@ -4,14 +4,14 @@ import Image from 'next/image';
 
 export default function StorySection() {
   return (
-    <section className="py-32 sm:py-48 bg-charcoal-800 relative overflow-hidden">
+    <section className="py-20 sm:py-32 lg:py-48 bg-charcoal-800 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 arabic-pattern opacity-50" />
 
-      <div className="site-container relative z-10 px-6 sm:px-16 lg:px-24">
-        <div className="grid lg:grid-cols-2 gap-20 lg:gap-40 items-center">
+      <div className="site-container relative z-10 px-6 sm:px-12 lg:px-24">
+        <div className="grid lg:grid-cols-2 gap-12 sm:gap-20 lg:gap-40 items-center">
           {/* Images collage */}
-          <div className="relative h-[450px] sm:h-[550px] lg:h-[600px] order-2 lg:order-1 mt-20 lg:mt-0">
+          <div className="relative h-[400px] sm:h-[550px] lg:h-[600px] order-2 lg:order-1 mt-12 lg:mt-0">
             {/* Main image */}
             <div className="absolute top-0 left-0 w-[65%] h-[70%] overflow-hidden gold-border rounded-3xl">
               <Image
@@ -50,7 +50,7 @@ export default function StorySection() {
             </div>
 
             <h2
-              className="font-serif text-cream mb-10 leading-[1.2]"
+              className="font-serif text-cream mb-6 sm:mb-10 leading-[1.2]"
               style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700 }}
             >
               Where Heritage
@@ -58,26 +58,26 @@ export default function StorySection() {
               <span className="gold-text italic">Meets Flavour</span>
             </h2>
 
-            <p className="text-cream/80 text-lg sm:text-xl leading-[1.8] mb-8 font-normal" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+            <p className="text-cream/80 text-lg sm:text-xl leading-relaxed mb-6 sm:mb-8 font-normal" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
               Nestled in the heart of Mira Road East, Qistaniya was born from a passion for preserving the rich culinary traditions of Arabia and Mughal India. Every recipe has been passed through generations, every spice carefully sourced.
             </p>
 
-            <p className="text-cream/50 text-base sm:text-lg leading-[1.8] mb-14" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 300 }}>
+            <p className="text-cream/50 text-base sm:text-lg leading-relaxed mb-10 sm:mb-14" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 300 }}>
               From our signature Mandi Lamb to the slow-cooked Dum Biryani, we invite you to embark on a journey through the royal kitchens of the ancient world, right here in Mumbai.
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
               {[
                 { num: '120+', label: 'Dishes' },
                 { num: '900+', label: 'Reviews' },
                 { num: '4.1★', label: 'Rating' },
               ].map(stat => (
-                <div key={stat.label} className="text-center glass gold-border rounded-3xl py-8 px-6 sm:py-6 sm:px-2">
-                  <p className="gold-text font-serif text-2xl sm:text-xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <div key={stat.label} className="text-center glass gold-border rounded-2xl sm:rounded-3xl py-4 px-2 sm:py-6 sm:px-4 flex flex-col justify-center min-h-[90px] sm:min-h-0">
+                  <p className="gold-text font-serif text-lg sm:text-xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {stat.num}
                   </p>
-                  <p className="text-cream/40 text-[11px] tracking-[0.3em] uppercase mt-2" style={{ fontFamily: 'Raleway, sans-serif' }}>
+                  <p className="text-cream/40 text-[8px] sm:text-[10px] lg:text-[11px] tracking-[0.1em] sm:tracking-[0.3em] uppercase mt-1 sm:mt-2 leading-tight" style={{ fontFamily: 'Raleway, sans-serif' }}>
                     {stat.label}
                   </p>
                 </div>
