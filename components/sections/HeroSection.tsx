@@ -56,7 +56,7 @@ export default function HeroSection() {
           className="font-serif text-cream leading-[1.1] sm:leading-none mb-6 sm:mb-8"
           style={{
             fontFamily: 'Playfair Display, serif',
-            fontSize: 'clamp(2.5rem, 9vw, 6rem)',
+            fontSize: 'clamp(2rem, 9vw, 6rem)',
             fontWeight: 800,
             textShadow: '0 4px 30px rgba(0,0,0,0.5)',
             animation: 'slideUp 1s ease-out 0.3s both',
