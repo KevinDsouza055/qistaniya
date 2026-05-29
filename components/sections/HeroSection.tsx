@@ -83,11 +83,11 @@ export default function HeroSection() {
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 justify-center items-center" style={{ animation: 'slideUp 1s ease-out 0.9s both' }}>
-          <div className="flex gap-4 w-full sm:w-auto">
-            <Link href="/order" className="btn-gold flex-1 sm:flex-none text-xs sm:text-sm px-8 py-3.5 sm:py-4 relative z-10 text-center shadow-2xl">
+          <div className="flex gap-3 sm:gap-4">
+            <Link href="/order" className="btn-gold text-[11px] sm:text-xs px-5 py-2.5 sm:px-7 sm:py-3 relative z-10 text-center shadow-2xl min-w-[120px] sm:min-w-[140px]">
               Order Now
             </Link>
-            <Link href="/reservations" className="btn-outline flex-1 sm:flex-none text-xs sm:text-sm px-8 py-3.5 sm:py-4 text-center">
+            <Link href="/reservations" className="btn-outline text-[11px] sm:text-xs px-5 py-2.5 sm:px-7 sm:py-3 text-center min-w-[120px] sm:min-w-[140px]">
               Reserve Table
             </Link>
           </div>
@@ -99,13 +99,13 @@ export default function HeroSection() {
 
         {/* Rating badge */}
         <div className="mt-12 sm:mt-20 flex items-center justify-center opacity-0" style={{ animation: 'fadeIn 1.5s ease-out 1.2s both' }}>
-          <div className="glass gold-border rounded-sm px-4 py-2.5 flex items-center gap-3 backdrop-blur-md">
-            <div className="hidden xs:block">
-              <div className="flex gap-0.5 sm:gap-1 mb-0.5">
+          <div className="glass gold-border rounded-2xl px-6 sm:px-10 py-4 sm:py-5 flex items-center gap-6 sm:gap-10 backdrop-blur-md shadow-2xl">
+            <div className="flex flex-col items-center sm:items-start">
+              <div className="flex gap-1 sm:gap-1.5 mb-1.5">
                 {[1,2,3,4].map(i => (
-                  <svg key={i} className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-gold-300" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-gold-300" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 ))}
-                <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3" viewBox="0 0 20 20" style={{ fill: 'url(#half)' }}>
+                <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 20 20" style={{ fill: 'url(#half)' }}>
                   <defs>
                     <linearGradient id="half">
                       <stop offset="50%" stopColor="#d4a843"/>
@@ -115,20 +115,19 @@ export default function HeroSection() {
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                 </svg>
               </div>
-              <p className="text-cream/40 text-[10px] tracking-wider" style={{ fontFamily: 'Raleway, sans-serif' }}>855 Google Reviews</p>
+              <p className="text-cream/40 text-[11px] sm:text-xs tracking-[0.1em] whitespace-nowrap uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>855 Google Reviews</p>
             </div>
-            <div className="hidden xs:block h-6 w-px bg-gold-300/20" />
-            <div>
-              <p className="gold-text font-bold text-base" style={{ fontFamily: 'Playfair Display, serif' }}>4.1</p>
-              <p className="text-cream/40 text-[9px]" style={{ fontFamily: 'Raleway, sans-serif' }}>Rating</p>
+            <div className="h-10 sm:h-12 w-px bg-gold-300/30" />
+            <div className="flex flex-col items-center">
+              <p className="gold-text font-bold text-xl sm:text-2xl leading-none mb-1" style={{ fontFamily: 'Playfair Display, serif' }}>4.1</p>
+              <p className="text-cream/40 text-[10px] sm:text-[11px] uppercase tracking-tighter" style={{ fontFamily: 'Raleway, sans-serif' }}>Rating</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style={{ animation: 'fadeIn 2s ease-out 1.5s both' }}>
-        <span className="text-cream/30 text-[9px] tracking-[0.4em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>Scroll</span>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2" style={{ animation: 'fadeIn 2s ease-out 1.5s both' }}>
         <div className="w-px h-10 bg-gradient-to-b from-gold-300/40 to-transparent animate-float" />
       </div>
     </section>
