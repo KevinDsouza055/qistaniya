@@ -43,7 +43,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         {/* Ornament top */}
-        <div className="flex items-center justify-center gap-4 mb-16 sm:mb-24 animate-fade-in">
+        <div className="flex items-center justify-center gap-4 mb-20 sm:mb-28 animate-fade-in">
           <div className="h-px w-14 bg-gradient-to-r from-transparent to-gold-300/60" />
           <span className="text-gold-300/70 text-[11px] sm:text-[12px] tracking-[0.5em] sm:tracking-[0.7em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>
             Est. Mira Road, Mumbai
@@ -53,7 +53,7 @@ export default function HeroSection() {
 
         {/* Main headline */}
         <h1
-          className="font-serif text-cream leading-[1.1] sm:leading-none mb-10 sm:mb-12"
+          className="font-serif text-cream leading-[1.1] sm:leading-none mb-12 sm:mb-16"
           style={{
             fontFamily: 'Playfair Display, serif',
             fontSize: 'clamp(2rem, 9vw, 6rem)',
@@ -69,7 +69,7 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <p
-          className="text-cream/60 text-base sm:text-lg max-w-xl mx-auto mb-20 sm:mb-32 leading-relaxed"
+          className="text-cream/60 text-base sm:text-lg max-w-xl mx-auto mb-24 sm:mb-40 leading-relaxed"
           style={{
             fontFamily: 'Cormorant Garamond, serif',
             fontWeight: 400,

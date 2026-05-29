@@ -25,15 +25,15 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function ReviewsSection() {
   return (
-    <section className="py-16 sm:py-32 bg-charcoal-950 relative overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center py-32 sm:py-56 bg-charcoal-950 overflow-hidden">
       {/* Refined Background Decor */}
       <div className="absolute inset-0 arabic-pattern opacity-30" />
       <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-charcoal-950 to-transparent z-0" />
       <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-charcoal-950 to-transparent z-0" />
 
-      <div className="site-container relative z-10 px-6 sm:px-8 max-w-7xl mx-auto">
+      <div className="site-container relative z-10 px-8 sm:px-12 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-12 sm:mb-20 text-center">
+        <div className="mb-20 sm:mb-32 text-center">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent to-gold-300/50" />
             <span className="text-gold-300 text-[10px] sm:text-[12px] tracking-[0.4em] sm:tracking-[0.6em] uppercase font-medium" style={{ fontFamily: 'Raleway, sans-serif' }}>
@@ -56,25 +56,25 @@ export default function ReviewsSection() {
         </div>
 
         {/* Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-16">
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="group relative flex flex-col h-full glass gold-border rounded-3xl sm:rounded-[3rem] p-6 sm:p-10 transition-all duration-500 hover:-translate-y-2 hover:border-gold-300 hover:shadow-[0_20px_50px_rgba(212,168,67,0.1)] overflow-hidden"
+              className="group relative flex flex-col h-full glass gold-border rounded-[2.5rem] sm:rounded-[4rem] p-10 sm:p-16 transition-all duration-500 hover:-translate-y-2 hover:border-gold-300 hover:shadow-[0_20px_50px_rgba(212,168,67,0.1)] overflow-hidden"
             >
               {/* Subtle Overlay Texture */}
               <div className="absolute inset-0 bg-gradient-to-br from-gold-300/[0.03] to-transparent pointer-events-none" />
               
               {/* Ornament */}
-              <div className="flex justify-center mb-6 sm:mb-10">
+              <div className="flex justify-center mb-10 sm:mb-14">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent to-gold-300/20 self-center" />
                 <span className="mx-4 text-gold-300/30 text-2xl">“</span>
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent to-gold-300/20 self-center" />
               </div>
 
               {/* Review Text Area - Vertically Centered */}
-              <div className="flex-1 flex items-center justify-center mb-8 sm:mb-12 min-h-[100px]">
-                <p className="text-cream/90 text-center text-base sm:text-lg leading-relaxed italic font-light" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+              <div className="flex-1 flex items-center justify-center mb-12 sm:mb-16 min-h-[120px]">
+                <p className="text-cream/90 text-center text-lg sm:text-xl leading-relaxed italic font-light" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                   {review.text}
                 </p>
               </div>
