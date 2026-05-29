@@ -204,10 +204,10 @@ export default function StaffDashboard() {
 
       <div className="site-container page-section">
         {/* Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-10">
           {STATUS_OPTIONS.map(status => (
-            <div key={status} className={`glass gold-border rounded-sm p-4 text-center cursor-pointer transition-all ${filter === status ? 'border-gold-300/50' : ''}`} onClick={() => setFilter(prev => prev === status ? 'all' : status)}>
-              <p className="text-2xl font-bold font-serif" style={{ fontFamily: 'Playfair Display, serif', color: status === 'pending' ? '#fbbf24' : status === 'preparing' ? '#60a5fa' : status === 'ready' ? '#4ade80' : '#d4a843' }}>
+            <div key={status} className={`glass gold-border rounded-sm p-3 sm:p-4 text-center cursor-pointer transition-all ${filter === status ? 'border-gold-300/50' : ''}`} onClick={() => setFilter(prev => prev === status ? 'all' : status)}>
+              <p className="text-xl sm:text-2xl font-bold font-serif" style={{ fontFamily: 'Playfair Display, serif', color: status === 'pending' ? '#fbbf24' : status === 'preparing' ? '#60a5fa' : status === 'ready' ? '#4ade80' : '#d4a843' }}>
                 {counts[status]}
               </p>
               <p className="text-cream/40 text-xs tracking-[0.15em] uppercase mt-1" style={{ fontFamily: 'Raleway, sans-serif' }}>

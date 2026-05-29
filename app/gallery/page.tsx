@@ -34,22 +34,22 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-charcoal-900 pt-16">
       {/* Hero */}
-      <div className="page-hero">
+      <div className="relative h-[300px] sm:h-[350px] lg:h-[400px] flex items-end overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url('/images/hero1.jpg')`,
+           backgroundImage: `url('/images/hero1.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center 30%',
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/50 to-charcoal-900/95" />
         <div className="absolute inset-0 arabic-pattern opacity-30" />
-        <div className="page-hero-content">
+        <div className="relative z-10 px-4 sm:px-8 pb-16 sm:pb-20 max-w-7xl mx-auto w-full">
           <h1 className="font-serif text-cream" style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800 }}>
             Our <span className="gold-text italic">Gallery</span>
           </h1>
-          <p className="text-cream/50 text-sm mt-1" style={{ fontFamily: 'Raleway, sans-serif' }}>
+          <p className="text-cream/50 text-base mt-3" style={{ fontFamily: 'Raleway, sans-serif' }}>
             A visual journey through our flavours and spaces
           </p>
         </div>
@@ -57,12 +57,12 @@ export default function GalleryPage() {
 
       {/* Filter tabs */}
       <div className="control-bar">
-        <div className="site-container py-4 flex gap-2 overflow-x-auto scrollbar-none">
+        <div className="site-container py-5 flex gap-3 overflow-x-auto scrollbar-none">
           {filterTabs.map(tab => (
             <button
               key={tab}
-              onClick={() => setActiveFilter(tab)}
-              className={`shrink-0 px-4 py-2 rounded-sm text-xs tracking-[0.1em] uppercase transition-all ${
+              onClick={() => setActiveFilter(tab)} // Increased padding and font size for tabs
+              className={`shrink-0 px-5 py-2.5 rounded-sm text-sm tracking-[0.1em] uppercase transition-all ${
                 activeFilter === tab
                   ? 'bg-gradient-to-r from-gold-400 to-gold-300 text-charcoal-900 font-semibold'
                   : 'border border-gold-300/20 text-cream/60 hover:border-gold-300/40'
@@ -76,7 +76,7 @@ export default function GalleryPage() {
       </div>
 
       {/* Masonry Grid */}
-      <div className="site-container page-section">
+      <div className="site-container page-section py-12 sm:py-16">
         <div className="masonry-grid">
           {filtered.map((img, i) => (
             <div
@@ -84,7 +84,7 @@ export default function GalleryPage() {
               className="masonry-item cursor-pointer group overflow-hidden rounded-sm gold-border hover:border-gold-300/50 transition-all duration-300"
               onClick={() => setLightbox(i)}
             >
-              <div className={`relative overflow-hidden ${img.span === 'tall' ? 'h-80' : 'h-52'}`}>
+              <div className={`relative overflow-hidden ${img.span === 'tall' ? 'h-96' : 'h-64'}`}>
                 <Image
                   src={img.src}
                   alt={img.alt}
@@ -96,8 +96,8 @@ export default function GalleryPage() {
                 <div className="absolute inset-0 bg-charcoal-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-gold-300 text-2xl">✦</span>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-charcoal-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                  <p className="text-cream/80 text-xs" style={{ fontFamily: 'Raleway, sans-serif' }}>{img.alt}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-charcoal-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p className="text-cream/80 text-sm" style={{ fontFamily: 'Raleway, sans-serif' }}>{img.alt}</p>
                   <p className="text-gold-300/70 text-[10px] tracking-wider">{img.category}</p>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function GalleryPage() {
               priority
             />
           </div>
-          <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-cream/50 text-sm" style={{ fontFamily: 'Raleway, sans-serif' }}>
+          <p className="absolute bottom-8 left-1/2 -translate-x-1/2 text-cream/50 text-base" style={{ fontFamily: 'Raleway, sans-serif' }}>
             {filtered[lightbox].alt}
           </p>
         </div>

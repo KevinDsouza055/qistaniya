@@ -74,12 +74,12 @@ export default function LoginPage() {
           </p>
         </div>
 
-        <div className="glass gold-border rounded-sm p-8">
-          <h3 className="text-cream text-lg font-semibold mb-6 text-center" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <div className="glass gold-border rounded-sm p-9 sm:p-12">
+          <h3 className="text-cream text-xl font-semibold mb-8 text-center" style={{ fontFamily: 'Playfair Display, serif' }}>
             Sign In
           </h3>
 
-          <form onSubmit={handleLogin} className="space-y-4" autoComplete="off">
+          <form onSubmit={handleLogin} className="space-y-5" autoComplete="off">
             <div className="relative">
               <Mail size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gold-300/50" />
               <input
@@ -123,7 +123,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="btn-gold w-full py-4 text-sm relative z-10 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="btn-gold w-full py-4.5 text-base relative z-10 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {loading ? 'Signing In...' : 'Sign In'}
             </button>

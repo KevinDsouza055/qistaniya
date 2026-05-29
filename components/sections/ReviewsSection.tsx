@@ -34,7 +34,7 @@ export default function ReviewsSection() {
   }, []);
 
   return (
-    <section className="section-pad bg-charcoal-700 relative overflow-hidden">
+    <section className="py-24 sm:py-32 bg-charcoal-700/50 relative overflow-hidden">
       <div className="absolute inset-0 arabic-pattern opacity-30" />
       <div
         className="absolute inset-0 opacity-10"
@@ -46,59 +46,59 @@ export default function ReviewsSection() {
         }}
       />
 
-      <div className="site-container-6xl relative z-10">
+      <div className="site-container relative z-10">
         {/* Header */}
-        <div className="section-heading">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-10 bg-gradient-to-r from-transparent to-gold-300/50" />
-            <span className="text-gold-300 text-[10px] tracking-[0.45em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>What Guests Say</span>
-            <div className="h-px w-10 bg-gradient-to-l from-transparent to-gold-300/50" />
+        <div className="section-heading mb-20 sm:mb-24">
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <div className="h-px w-20 bg-gradient-to-r from-transparent to-gold-300/50" />
+            <span className="text-gold-300 text-[11px] sm:text-[13px] tracking-[0.5em] sm:tracking-[0.7em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>Testimonials</span>
+            <div className="h-px w-20 bg-gradient-to-l from-transparent to-gold-300/50" />
           </div>
           <h2
             className="font-serif text-cream"
-            style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700 }}
+            style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', fontWeight: 700 }}
           >
             Stories of <span className="gold-text italic">Delight</span>
           </h2>
-          <div className="flex items-center justify-center gap-2 mt-4">
-            <StarRating rating={5} />
+          <div className="flex items-center justify-center gap-2 mt-5">
+            <StarRating rating={4.5} /> {/* Adjusted for average rating */}
             <span className="text-cream/50 text-sm ml-2" style={{ fontFamily: 'Raleway, sans-serif' }}>4.1 · 855 Reviews on Google</span>
           </div>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
           {reviews.map((review, idx) => (
             <div
               key={review.id}
-              className={`glass gold-border rounded-sm p-6 transition-all duration-500 ${
-                idx === active ? 'border-gold-300/50 shadow-lg shadow-gold-300/10 scale-[1.02]' : 'hover:border-gold-300/30'
+              className={`glass gold-border rounded-sm p-6 sm:p-10 transition-all duration-500 flex flex-col justify-between h-full relative overflow-hidden ${
+                idx === active ? 'border-gold-300/50 shadow-2xl shadow-gold-300/10 scale-[1.03] z-20' : 'hover:border-gold-300/30 opacity-60 grayscale-[0.5]'
               }`}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
-                  style={{ background: 'linear-gradient(135deg, #d4a843, #c4922a)', color: '#0a0a08', fontFamily: 'Raleway, sans-serif' }}
-                >
-                  {review.avatar}
-                </div>
-                <div>
-                  <p className="text-cream/90 text-sm font-semibold" style={{ fontFamily: 'Raleway, sans-serif' }}>{review.name}</p>
-                  <div className="flex items-center gap-2">
-                    <StarRating rating={review.rating} />
-                    <span className="text-cream/30 text-[10px]">{review.date}</span>
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-base font-bold shrink-0 shadow-lg"
+                    style={{ background: 'linear-gradient(135deg, #d4a843, #c4922a)', color: '#0a0a08', fontFamily: 'Raleway, sans-serif' }}>
+                    {review.avatar}
+                  </div>
+                  <div>
+                    <p className="text-cream text-lg font-semibold tracking-wide" style={{ fontFamily: 'Raleway, sans-serif' }}>{review.name}</p>
+                    <div className="flex items-center gap-3 mt-1">
+                      <StarRating rating={review.rating} />
+                      <span className="text-cream/30 text-[12px]">{review.date}</span>
+                    </div>
                   </div>
                 </div>
+                <p className="text-cream/80 text-lg sm:text-xl leading-relaxed italic font-light" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                  &ldquo;{review.text}&rdquo;
+                </p>
               </div>
-              <p className="text-cream/60 text-sm leading-relaxed" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1rem' }}>
-                &ldquo;{review.text}&rdquo;
-              </p>
             </div>
           ))}
         </div>
 
         {/* Dots */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-10">
           {reviews.map((_, i) => (
             <button
               key={i}
