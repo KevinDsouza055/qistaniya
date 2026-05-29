@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function CTASection() {
   return (
-    <section className="relative pt-[20vh] pb-64 sm:pt-[35vh] sm:pb-96 overflow-hidden">
+    <section className="relative min-h-[100vh] flex items-center justify-center py-48 sm:py-80 overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0"
@@ -18,27 +18,27 @@ export default function CTASection() {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-300/40 to-transparent" />
 
       <div className="relative z-10 site-container max-w-4xl mx-auto text-center px-6">
-        <div className="flex items-center justify-center gap-4 mb-24">
+        <div className="flex items-center justify-center gap-4 mb-16 sm:mb-32">
           <div className="h-px w-8 bg-gold-300/50" />
-          <span className="text-gold-300 text-[9px] tracking-[0.5em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>Experience Royalty</span>
+          <span className="text-gold-300 text-[11px] sm:text-[13px] tracking-[0.5em] sm:tracking-[0.7em] uppercase font-medium" style={{ fontFamily: 'Raleway, sans-serif' }}>Experience Royalty</span>
           <div className="h-px w-8 bg-gold-300/50" />
         </div>
 
         <h2
-          className="font-serif text-cream leading-tight mb-20 sm:mb-24"
-          style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(3rem, 7vw, 5rem)', fontWeight: 800 }}
+          className="font-serif text-cream leading-[1.2] mb-12 sm:mb-32"
+          style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.8rem, 9vw, 5.5rem)', fontWeight: 800 }}
         >
           Reserve Your Table
           <br />
           <span className="gold-text italic">Tonight</span>
         </h2>
 
-        <p className="text-cream/60 text-xl sm:text-3xl leading-relaxed mb-32 max-w-3xl mx-auto" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+        <p className="text-cream/60 text-lg sm:text-3xl leading-[1.8] mb-20 sm:mb-44 max-w-3xl mx-auto" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
           Join us for an unforgettable evening of royal Arabic and Mughlai cuisine.
           Private dining rooms available for special occasions.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-12 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-10 sm:gap-16 justify-center items-center">
           <Link href="/reservations" className="btn-gold px-12 py-4 text-xs relative z-10 min-w-[200px]">
             Book a Table
           </Link>
@@ -47,7 +47,7 @@ export default function CTASection() {
           </Link>
         </div>
 
-        <p className="text-cream/30 text-[11px] sm:text-xs mt-32 tracking-[0.2em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>
+        <p className="text-cream/30 text-[11px] sm:text-xs mt-24 sm:mt-44 tracking-[0.2em] uppercase" style={{ fontFamily: 'Raleway, sans-serif' }}>
           Or call us at{' '}
           <a href="tel:09987370880" className="text-gold-300/60 hover:text-gold-300 transition-colors border-b border-gold-300/20 pb-0.5">09987370880</a>
         </p>
